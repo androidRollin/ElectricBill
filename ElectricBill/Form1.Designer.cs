@@ -164,6 +164,7 @@ namespace ElectricBill
             this.btnClear.TabIndex = 11;
             this.btnClear.Text = "btn-CLEA&R";
             this.btnClear.UseVisualStyleBackColor = true;
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
             // btnClose
             // 
@@ -173,6 +174,7 @@ namespace ElectricBill
             this.btnClose.TabIndex = 12;
             this.btnClose.Text = "btn-CL&OSE";
             this.btnClose.UseVisualStyleBackColor = true;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // tbAccountNumber
             // 
@@ -209,33 +211,33 @@ namespace ElectricBill
             // 
             // tbKwHUsed
             // 
-            this.tbKwHUsed.Enabled = false;
             this.tbKwHUsed.Location = new System.Drawing.Point(126, 195);
             this.tbKwHUsed.Name = "tbKwHUsed";
+            this.tbKwHUsed.ReadOnly = true;
             this.tbKwHUsed.Size = new System.Drawing.Size(211, 23);
             this.tbKwHUsed.TabIndex = 18;
             // 
             // tbElectricBill
             // 
-            this.tbElectricBill.Enabled = false;
             this.tbElectricBill.Location = new System.Drawing.Point(126, 261);
             this.tbElectricBill.Name = "tbElectricBill";
+            this.tbElectricBill.ReadOnly = true;
             this.tbElectricBill.Size = new System.Drawing.Size(211, 23);
             this.tbElectricBill.TabIndex = 20;
             // 
             // tbSystemCharges
             // 
-            this.tbSystemCharges.Enabled = false;
             this.tbSystemCharges.Location = new System.Drawing.Point(126, 296);
             this.tbSystemCharges.Name = "tbSystemCharges";
+            this.tbSystemCharges.ReadOnly = true;
             this.tbSystemCharges.Size = new System.Drawing.Size(211, 23);
             this.tbSystemCharges.TabIndex = 21;
             // 
             // tbTotalBill
             // 
-            this.tbTotalBill.Enabled = false;
             this.tbTotalBill.Location = new System.Drawing.Point(126, 329);
             this.tbTotalBill.Name = "tbTotalBill";
+            this.tbTotalBill.ReadOnly = true;
             this.tbTotalBill.Size = new System.Drawing.Size(211, 23);
             this.tbTotalBill.TabIndex = 22;
             // 
@@ -292,6 +294,7 @@ namespace ElectricBill
             this.Controls.Add(this.lblAccountNumber);
             this.Controls.Add(this.lblCustomerArea);
             this.Name = "fElectribBill";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MJRC Electric Company";
             this.ResumeLayout(false);
             this.PerformLayout();

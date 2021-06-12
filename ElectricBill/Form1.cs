@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Drawing2D;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -134,6 +135,33 @@ namespace ElectricBill
         private void tbCustomerName_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnClear_Click(object sender, EventArgs e)
+        {
+            cbCustomerArea.SelectedIndex = -1;
+            tbAccountNumber.Text = string.Empty;
+            tbCustomerName.Text = string.Empty;
+            tbPreviousReading.Text = string.Empty;
+            tbCurrentReading.Text = string.Empty;
+            tbKwHUsed.Text = string.Empty;
+            cbAccountType.SelectedIndex = -1;
+            tbElectricBill.Text = string.Empty;
+            tbSystemCharges.Text = string.Empty;
+            tbTotalBill.Text = string.Empty;
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            DialogResult dialogResult = MessageBox.Show("Are you sure?", "Exit Confirmation", MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.Yes)
+            {
+                this.Close();
+            }
+            else if (dialogResult == DialogResult.No)
+            {
+                return;
+            }
         }
     }
 }
